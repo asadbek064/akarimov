@@ -53,6 +53,10 @@ $button-color: #000000;
     margin: 1rem;
     float: right;
 
+    a {
+        outline: none;
+        color: inherit;
+    }
     .name {
         font-size: x-large;
     }

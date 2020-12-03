@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-pages',
   styleUrls: ['pages.component.scss'],
   template: `
-    <div fxLayout="column">
+    <div class="main-view" fxLayout="column">
       <router-outlet></router-outlet>
     </div>
   `,

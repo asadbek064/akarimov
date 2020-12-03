@@ -1,10 +1,20 @@
 mat-accordion {
+    width: 500px;
     margin: 1rem;
-    margin: 0;
   position: absolute;
   top: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+
+  form {
+      width: 100%;
+     
+  }
+
+  button {
+      width: 50%;
+  }
+  
 }
 
 .email {
@@ -18,17 +28,19 @@ mat-accordion {
 .email, .message {
     font-size: large!important;
 }
-.form-field {
-    margin-top: 1rem;
-}
-.form-container {
-    button {
-        margin: 1rem;
-    }
-}
 
+.back-arrow {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    font-size: xx-large;
+    transition: 0.22s;
+}
+.back-arrow:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
 @media only screen and (max-width: 600px) {
     .email, .message {
-        width: 85vw;
+        width: 100%;
     }
 }

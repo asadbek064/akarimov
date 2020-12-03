@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { PagesService } from '../../../@core/services/pages.service';
 
 @Component({
@@ -8,12 +9,11 @@ import { PagesService } from '../../../@core/services/pages.service';
 })
 export class DevCardComponent implements OnInit {
   pageChangeStatus: string = 'animate__animated animate__fadeInDown animate__fast';
-  contactMeStatus: boolean;
+  contactMeStatus: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
 
   constructor(public pagesService: PagesService) {
-    this.contactMeStatus = false;
     this.pagesService.contactMeStatus_Change.subscribe( newState => {
-      this.contactMeStatus = newState;
+      this.contactMeStatus.next(newState);
     })
   }
 

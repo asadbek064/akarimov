@@ -1,4 +1,4 @@
-<ng-container *ngIf="!contactMeStatus; else elseTemplate">
+<ng-container *ngIf="!(contactMeStatus | async); else elseTemplate">
     <div  class="container">
         <div class="card" [ngClass]="pageChangeStatus" >
             <div class="section" >
@@ -8,10 +8,10 @@
                     <div class="name">Asadbek Karimov</div>
                     <div class="job-title">Full-Stack Developer</div>
                     <div class="links" >
-                        <a class="link-item fa fa-github"></a>
-                        <a class="link-item fa fa-stack-overflow"></a>
-                        <a class="link-item fa fa-linkedin"></a>
-                        
+                        <a class="link-item fa fa-github" href="https://github.com/asadbek064"></a>
+                        <a class="link-item fa fa-stack-overflow" href="https://stackoverflow.com/users/8628497/karimov"></a>
+                        <a class="link-item fa fa-linkedin" href="https://www.linkedin.com/in/asadbekkarimov/"></a>
+                        <a class="link-item fa fa-file" style="font-size: 14.5pt;" href="https://f000.backblazeb2.com/file/public-data/Asadbek_Karimov_Resume_MDRN.pdf"></a>
                     </div>
                 </div>
             </div>
@@ -25,7 +25,7 @@
             </div>
         </div>
     
-        <div class="scroll-indicator" (click)="OpenProject()" >
+        <div class="scroll-indicator" (click)="OpenProject()"[matTooltipPosition]="'above'" matTooltip="Projects">
             <div class="dots"></div>
         </div>
     
@@ -33,6 +33,7 @@
 </ng-container>
 <ng-template #elseTemplate>
     <div class="contactMeWrapper">
-        <app-contact-me fxLayoutAlign="center" [openState]="contactMeStatus"></app-contact-me>
+        <app-contact-me class="animate__animated animate__fadeIn faster" fxLayoutAlign="center"></app-contact-me>
     </div>
 </ng-template>
+

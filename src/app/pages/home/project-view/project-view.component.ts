@@ -54,15 +54,11 @@ export class ProjectViewComponent implements OnInit {
   
   pageChangeStatus: string = 'animate__animated animate__fadeInUp animate__fast';
   cardFlexSize!: string;
-  isContactMe!: boolean;
 
-  @ViewChild('contactMe') public contactMe!: ElementRef;
-  
+
   
   constructor(public pagesService: PagesService ) { 
-    this.pagesService.contactMeStatus_Change.subscribe( async newState => {
-      this.isContactMe = newState;
-    })
+
   }
   
   ngOnInit(): void {
@@ -82,13 +78,6 @@ export class ProjectViewComponent implements OnInit {
     this.pageChangeStatus = "animate__animated animate__fadeOutDown animate__faster"
 }
 
-  scrollToContactMe(): void {
-    this.contactMe.nativeElement.scroll({
-      top: this.contactMe.nativeElement.scrollHeight,
-      left: 0,
-      behavior: 'smooth'
-    });
-  }
 
   
 }

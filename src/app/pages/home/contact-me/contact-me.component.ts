@@ -1,6 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { PagesService } from '../../../@core/services/pages.service';
-import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
+import { SendEmailService } from "../../../@core/services/send-email.service";
+import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-contact-me',
@@ -9,15 +11,62 @@ import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms'
 })
 export class ContactMeComponent implements OnInit {
 
-  @Input() openState!: boolean;
+  openState!: boolean;
 
-  constructor(public pagesService: PagesService) { }
+  contactMeForm!: FormGroup;
+  
+  constructor(  public pagesService: PagesService,
+                private emailService: SendEmailService,
+                private formBuilder: FormBuilder,
+                private _snackBar: MatSnackBar) { 
+      this.pagesService.contactMeStatus_Change.subscribe( newState => {
+          this.openState = newState;
+      })
+  }
 
   ngOnInit(): void {
+    this.createForm();
+  }
+
+  createForm() {
+    let emailregex: RegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    this.contactMeForm = this.formBuilder.group({
+
+      'email': new FormControl(null, Validators.required),
+      'message': new FormControl(null, Validators.required),
+    });
   }
 
   sendEmail() {
-    window.location.reload();
+    this.emailService.postEmail(this.contactMeForm.get('email')?.value, this.contactMeForm.get('message')?.value).subscribe(
+      async res => {
+        if (res) {
+        this.openSnackBar('Message Sent! 🙌', '', 500);
+        await this.delay(500);
+        this.pagesService.contactMeStatus_Change.next(false);
+        this.pagesService.sendEmailStatus_Change.next(true);
+        }
+      },
+      (error) => {
+        this.openSnackBar('Wronge Email format Please try again 😢', '', 2500)
+      }
+    )
+  }
+
+  openSnackBar(message: string, action: string, duration: number) {
+    this._snackBar.open(message, action, {
+      horizontalPosition: 'center',
+      verticalPosition: 'top',
+      duration: duration,
+    });
+  }
+
+  delay(ms: number) {
+    return new Promise( resolve => setTimeout(resolve, ms) );
+  }
+
+  goBack() {
+    this.pagesService.contactMeStatus_Change.next(false);
     this.pagesService.sendEmailStatus_Change.next(true);
   }
 

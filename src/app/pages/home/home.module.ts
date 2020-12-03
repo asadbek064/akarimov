@@ -10,6 +10,7 @@ import { ProjectCardComponent } from './project-view/project-card/project-card.c
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { IvyCarouselModule} from 'angular-responsive-carousel';
 import { ContactMeComponent } from './contact-me/contact-me.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 const COMPONENTS = [
     HomeComponent,
@@ -24,6 +25,8 @@ const MODULES = [
     MaterialModule,
     FlexLayoutModule,
     IvyCarouselModule,
+    ReactiveFormsModule,
+    FormsModule,
 ]
 
 @NgModule({
