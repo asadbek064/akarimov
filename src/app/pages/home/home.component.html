@@ -1,0 +1,5 @@
+<app-dev-card *ngIf="(isProjectPage) === false; else projectView" ></app-dev-card>
+<ng-template #projectView>
+    <app-project-view></app-project-view>
+</ng-template>
+

@@ -1,0 +1,38 @@
+<div fxLayoutAlign="center">
+    <mat-card fxFlex.xs="95%">
+        <mat-card-header>
+            <mat-card-title>{{ ProjectTitle }}</mat-card-title>
+            <mat-card-subtitle>{{ CompanyName}}</mat-card-subtitle>
+        </mat-card-header>
+
+        <div *ngIf="(isMobile) === false">
+            <carousel
+                [height]="300"
+                [cellsToShow]="1"
+                [images]="ImageSrc">
+            </carousel>
+        </div>
+
+        <div *ngIf="isMobile" fxLayoutAlign="center" (click)="goToLink(ProjectLink.Link)">
+            <img src="{{ ImageSrc_mobile }}" alt="" width="200">
+        </div>
+        <mat-card-content>
+            {{ ProjectDesc }}
+        </mat-card-content>
+        <mat-card-actions fxLayoutAlign="space-around" fxLayout="row">
+            <button 
+                mat-raised-button color="primary" 
+                fxFlex="30%" 
+                [disabled]="ProjectLink.ButtonStatus"
+                (click)="goToLink(ProjectLink.Link)"
+            > <i class="fa fa-mouse-pointer"></i> LIVE</button>
+            <button 
+                mat-raised-button 
+                fxFlex="30%" 
+                [disabled]="ProjectGithub.ButtonStatus"
+                (click)="goToLink(ProjectGithub.Link)"
+            > <i class="fa fa-github"></i> CODE</button>
+          </mat-card-actions>
+    </mat-card>
+
+</div>

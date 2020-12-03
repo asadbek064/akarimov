@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PagesService } from '../../@core/services/pages.service';
 
 @Component({
     selector: 'app-home',
@@ -6,7 +7,24 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-    constructor() { }
+    isProjectPage: boolean;
+    fadeOutUp: string = "animate__animated animate__fadeOutUp";
+    fadeInDown: string = "animate__animated animate__fadeInDown";
 
-    ngOnInit(): void { }
+
+    constructor(public pagesService: PagesService) {
+        this.isProjectPage = false;
+
+        this.pagesService.isProjectPage_Change.subscribe( newState => {
+            this.isProjectPage = newState;
+            console.log(newState)
+        })
+    }
+
+    ngOnInit(): void {
+        this.isProjectPage = false;
+     }
+
+    
+
 }

@@ -1,0 +1,22 @@
+<mat-accordion fxFlex="35%" fxFlex.xs="95%">
+    <mat-expansion-panel hideToggle  [expanded]="openState">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+            Contact Me
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <form action="https://formspree.io/f/xzbkawal" method="POST" id="my-form" >
+        <div fxLayout="column" class="form-container" fxLayoutAlign="center center">
+            <div class="form-field"  fxLayout="column" >
+                <mat-label>Your email</mat-label>
+                <input class="email" type="text" name="_replyto" placeholder="your@email.com">
+            </div>
+            <div class="form-field" fxLayout="column">
+                <mat-label>Message:</mat-label>
+                <textarea class="message" type="text" name="_replyto" placeholder="say hi!"></textarea>
+            </div>
+            <button mat-raised-button color="primary" type="submit" (click)="sendEmail()">Send</button>
+        </div>
+    </form>
+    </mat-expansion-panel>
+</mat-accordion>   
