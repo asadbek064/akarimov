@@ -54,11 +54,22 @@ export class ProjectViewComponent implements OnInit {
   
   pageChangeStatus: string = 'animate__animated animate__fadeInUp animate__fast';
   cardFlexSize!: string;
+  scrollCount = 0;
 
 
   
   constructor(public pagesService: PagesService ) { 
-
+    document.addEventListener('wheel', (e) => {
+      if (e.deltaY < 0) { // scroll up
+        this.scrollCount++;
+        if (this.scrollCount > 5) {
+          this.scrollCount = 0; // reset
+          this.OpenDevCard();
+        }
+      } else if ( e.deltaY > 0) {
+        this.scrollCount--;
+      }
+    });
   }
   
   ngOnInit(): void {

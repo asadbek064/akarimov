@@ -33,7 +33,7 @@
             "styles": [
               "src/styles.scss",
               "src/app/@theme/theme.scss",
-              "node_modules/font-awesome/css/font-awesome.css" 
+              "node_modules/font-awesome/css/font-awesome.css"
             ],
             "scripts": []
           },
@@ -97,7 +97,8 @@
               "src/assets/image"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/app/@theme/theme.scss"
             ],
             "scripts": []
           }
@@ -126,6 +127,10 @@
               "devServerTarget": "akarimov:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
     }

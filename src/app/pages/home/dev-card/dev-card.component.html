@@ -1,5 +1,5 @@
-<ng-container *ngIf="!(contactMeStatus | async); else elseTemplate">
-    <div  class="container">
+<ng-container *ngIf="!(contactMeStatus | async); else elseTemplate" >
+    <div  class="container"  #main_view>
         <div class="card" [ngClass]="pageChangeStatus" >
             <div class="section" >
                 <img class="avatarImg"  height="100" width="100" src="https://f000.backblazeb2.com/file/public-data/avatar_sm.png" alt="avatar_img">

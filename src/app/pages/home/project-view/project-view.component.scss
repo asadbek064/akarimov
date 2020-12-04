@@ -1,7 +1,10 @@
 
 
+.main_view {
+	height: 100vh;
+}
 .content {
-    margin: 10px;
+	margin: 10px;
 }
 
 .title {
@@ -10,6 +13,13 @@
     text-align: center;
     margin: 2.5rem;
 }
+
+#backBtn {
+	margin-top: 7rem;
+    bottom: 0;
+    width: 100%;
+}
+
 /* scroll indicator */
 .scroll-indicator {
     transform: rotate(180deg);

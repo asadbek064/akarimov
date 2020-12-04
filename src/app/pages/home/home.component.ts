@@ -17,7 +17,6 @@ export class HomeComponent implements OnInit {
 
         this.pagesService.isProjectPage_Change.subscribe( newState => {
             this.isProjectPage = newState;
-            console.log(newState)
         })
     }
 

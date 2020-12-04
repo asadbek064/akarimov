@@ -10,17 +10,18 @@ $button-color: #000000;
     bottom: 0;
     margin: auto;
   }
+
 .container {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     resize: both;
-    overflow: auto;
+    overflow-y:hidden;
+    overflow-x:hidden;
 }
 
 .card {
-
     width: 400px;
     height: 300px;
     margin-left: auto;

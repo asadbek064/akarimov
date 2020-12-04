@@ -3,12 +3,12 @@ import { CommonModule } from '@angular/common';
 
 import { PagesRoutingModule } from './pages-routing.module';
 import { PagesComponent } from './pages.component';
-import { ThemeModule } from "../@theme/theme.module";
-import { MaterialModule } from "../@theme/material.module";
+import { ThemeModule } from '../@theme/theme.module';
+import { MaterialModule } from '../@theme/material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
-  declarations: [ 
+  declarations: [
     PagesComponent
   ],
   imports: [

@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeRoutingModule } from './home-routing.module';
-import { ThemeModule } from "../../@theme/theme.module";
-import { MaterialModule } from "../../@theme/material.module";
+import { ThemeModule } from '../../@theme/theme.module';
+import { MaterialModule } from '../../@theme/material.module';
 import { HomeComponent } from './home.component';
 import { DevCardComponent } from './dev-card/dev-card.component';
 import { ProjectViewComponent } from './project-view/project-view.component';
@@ -16,7 +16,7 @@ const COMPONENTS = [
     HomeComponent,
     ProjectViewComponent,
     DevCardComponent
-]
+];
 
 const MODULES = [
     CommonModule,
@@ -27,7 +27,7 @@ const MODULES = [
     IvyCarouselModule,
     ReactiveFormsModule,
     FormsModule,
-]
+];
 
 @NgModule({
     declarations: [ ...COMPONENTS, ProjectCardComponent, ContactMeComponent],

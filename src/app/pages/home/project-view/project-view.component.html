@@ -1,5 +1,5 @@
 
-<div [ngClass]="pageChangeStatus" fxLayout="column" #contactMe>
+<div [ngClass]="pageChangeStatus" fxLayout="column" #contactMe class="main_view">
     <div class="title">Projects</div>
     <div class="content"  
         fxLayoutAlign="center"
@@ -20,7 +20,9 @@
             
     </div>
     
-    <div class="scroll-indicator" (click)="OpenDevCard()">
-        <div class="dots"></div>
-    </div>
+        <div id="backBtn">
+            <div class="scroll-indicator" (click)="OpenDevCard()">
+                <div class="dots"></div>
+            </div>
+        </div>
 </div>
