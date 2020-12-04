@@ -60,19 +60,29 @@ export class ProjectViewComponent implements OnInit {
   
   constructor(public pagesService: PagesService ) { 
     document.addEventListener('wheel', (e) => {
-      if (e.deltaY < 0) { // scroll up
-        this.scrollCount++;
-        if (this.scrollCount > 5) {
-          this.scrollCount = 0; // reset
-          this.OpenDevCard();
-        }
-      } else if ( e.deltaY > 0) {
-        this.scrollCount--;
+      
+      if (document.body.scrollTop === 0) // if at top of page 
+        if (e.deltaY < 0) { // scroll up
+          this.scrollCount++;
+          if (this.scrollCount > 4) {
+            this.scrollCount = 0; // reset
+            this.OpenDevCard();
+          }
       }
     });
+
+    
   }
   
   ngOnInit(): void {
+  }
+
+  scrollStart() {
+    console.log('scroll start');
+  }
+
+  scroll() {
+    console.log('scroll ended');
   }
 
   async OpenDevCard() {

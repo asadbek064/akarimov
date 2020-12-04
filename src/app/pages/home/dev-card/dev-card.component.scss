@@ -59,11 +59,14 @@ $button-color: #000000;
         color: inherit;
     }
     .name {
-        font-size: x-large;
+        font-size: 20pt;
+        text-align: center;
     }
     .job-title {
         font-size: medium;
         font-style: italic;
+        margin-top: 0.3rem;
+        text-align: center;
     }
 }
 
@@ -223,4 +226,27 @@ $button-color: #000000;
 
 .scroll-indicator:hover {
     cursor: pointer;
+}
+
+/* Portrait iPhone X*/
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+    .name {
+        font-size: 15pt!important;
+    }
+}
+
+
+/* Portrait iPhone 6*/
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
+    .name {
+        font-size: 15pt!important;
+    }
 }

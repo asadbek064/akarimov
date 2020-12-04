@@ -1,4 +1,4 @@
-<div fxLayoutAlign="center">
+<div fxLayoutAlign="center" class="animate__animated animate__fadeIn ">
     <mat-card fxFlex.xs="95%">
         <mat-card-header>
             <mat-card-title>{{ ProjectTitle }}</mat-card-title>
@@ -13,7 +13,7 @@
             </carousel>
         </div>
 
-        <div *ngIf="isMobile" fxLayoutAlign="center" (click)="goToLink(ProjectLink.Link)">
+        <div *ngIf="isMobile" fxLayoutAlign="center" class="mobile_thumbnail" (click)="goToLink(ProjectLink.Link)">
             <img src="{{ ImageSrc_mobile }}" alt="" width="200">
         </div>
         <mat-card-content>
