@@ -19,23 +19,23 @@ export class ProjectCardComponent implements OnInit {
   @Input() ImageSrc!: ImgSrc[];
   @Input() ImageSrc_mobile!: string;
   @Input() ProjectDesc!: string;
-  @Input() ProjectLink!:  Button;
+  @Input() ProjectLink!: Button;
   @Input() ProjectGithub!: Button;
 
   isMobile: boolean;
-  constructor( breakpointObserver: BreakpointObserver ) { 
+  constructor( breakpointObserver: BreakpointObserver ) {
     this.isMobile = false;
 
     // dectec wheter its mobile device
     breakpointObserver.observe([
       Breakpoints.HandsetPortrait
     ]).subscribe( result => {
-      this.isMobile = result.matches
-    })
+      this.isMobile = result.matches;
+    });
 
   }
 
-  goToLink(link: string) {
+  goToLink(link: string): void {
     window.open(link);
   }
   ngOnInit(): void {

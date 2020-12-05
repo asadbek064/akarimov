@@ -1,28 +1,31 @@
 
-<div [ngClass]="pageChangeStatus" fxLayout="column" #contactMe >
-    <div class="title">Projects</div>
-    <div class="content"  
-        fxLayoutAlign="center"
-        fxLayout.lg="row" 
-        fxLayout.lt-lg="column"
-        >
-            <app-project-card
-                *ngFor="let PROJECTS_LIST of PROJECTS_LIST"
-                [ProjectTitle] = "PROJECTS_LIST.ProjectTitle"
-                [CompanyName] = "PROJECTS_LIST.CompanyName"
-                [ImageSrc] = "PROJECTS_LIST.ImageSrc"
-                [ImageSrc_mobile] = "PROJECTS_LIST.ImageSrc_mobile"
-                [ProjectDesc] = "PROJECTS_LIST.ProjectDesc"
-                [ProjectLink] = "PROJECTS_LIST.ProjectLink"
-                [ProjectGithub] = "PROJECTS_LIST.ProjectGithub"
-            ></app-project-card>    
+    <div [ngClass]="pageChangeStatus" fxLayout="column">
     
-            
-    </div>
-    
-        <div id="backBtn">
-            <div class="scroll-indicator" (click)="OpenDevCard()">
-                <div class="dots"></div>
-            </div>
+        <div class="title">Projects</div>
+        <div class="content"  
+            fxLayoutAlign="center"
+            fxLayout.lg="row" 
+            fxLayout.lt-lg="column"
+            >
+                <app-project-card
+                    id="projects"
+                    *ngFor="let PROJECTS_LIST of PROJECTS_LIST"
+                    [ProjectTitle] = "PROJECTS_LIST.ProjectTitle"
+                    [CompanyName] = "PROJECTS_LIST.CompanyName"
+                    [ImageSrc] = "PROJECTS_LIST.ImageSrc"
+                    [ImageSrc_mobile] = "PROJECTS_LIST.ImageSrc_mobile"
+                    [ProjectDesc] = "PROJECTS_LIST.ProjectDesc"
+                    [ProjectLink] = "PROJECTS_LIST.ProjectLink"
+                    [ProjectGithub] = "PROJECTS_LIST.ProjectGithub"
+                ></app-project-card>    
+        
+                
         </div>
-</div>
+        
+            <div id="backBtn">
+                <div class="scroll-indicator" (click)="OpenDevCard()">
+                    <div class="dots"></div>
+                </div>
+            </div>
+    </div>
+ 
