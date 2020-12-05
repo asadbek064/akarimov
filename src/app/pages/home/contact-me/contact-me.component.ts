@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, SimpleChanges, ViewChild } from '@angular/core';
 import { PagesService } from '../../../@core/services/pages.service';
 import { SendEmailService } from "../../../@core/services/send-email.service";
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
@@ -11,22 +11,19 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class ContactMeComponent implements OnInit {
 
-  openState!: boolean;
-
   contactMeForm!: FormGroup;
-  
+
   constructor(  public pagesService: PagesService,
                 private emailService: SendEmailService,
                 private formBuilder: FormBuilder,
-                private _snackBar: MatSnackBar) { 
-      this.pagesService.contactMeStatus_Change.subscribe( newState => {
-          this.openState = newState;
-      })
-  }
+                private _snackBar: MatSnackBar) {  
+                  
+    }
 
   ngOnInit(): void {
     this.createForm();
   }
+
 
   createForm() {
     let emailregex: RegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
@@ -43,8 +40,8 @@ export class ContactMeComponent implements OnInit {
         if (res) {
         this.openSnackBar('Message Sent! 🙌', '', 500);
         await this.delay(500);
-        this.pagesService.contactMeStatus_Change.next(false);
         this.pagesService.sendEmailStatus_Change.next(true);
+        this.pagesService.contactMeStatus_Change.next(false);
         }
       },
       (error) => {
@@ -63,11 +60,6 @@ export class ContactMeComponent implements OnInit {
 
   delay(ms: number) {
     return new Promise( resolve => setTimeout(resolve, ms) );
-  }
-
-  goBack() {
-    this.pagesService.contactMeStatus_Change.next(false);
-    this.pagesService.sendEmailStatus_Change.next(true);
   }
 
 }

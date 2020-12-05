@@ -2,10 +2,10 @@
     <div [ngClass]="pageChangeStatus" fxLayout="column">
     
         <div class="title">Projects</div>
-        <div class="content"  
+        <div class="content"
+            id="content"  
             fxLayoutAlign="center"
-            fxLayout.lg="row" 
-            fxLayout.lt-lg="column"
+            fxLayout="column" 
             >
                 <app-project-card
                     id="projects"
@@ -18,12 +18,11 @@
                     [ProjectLink] = "PROJECTS_LIST.ProjectLink"
                     [ProjectGithub] = "PROJECTS_LIST.ProjectGithub"
                 ></app-project-card>    
-        
-                
+      
         </div>
         
             <div id="backBtn">
-                <div class="scroll-indicator" (click)="OpenDevCard()">
+                <div class="scroll-indicator" (click)="changeToDevView()">
                     <div class="dots"></div>
                 </div>
             </div>

@@ -1,31 +1,27 @@
-<mat-accordion fxFlex="35%" fxFlex.xs="95%">
-    <mat-expansion-panel hideToggle  [expanded]="openState">
-        <mat-expansion-panel-header>
-            <mat-panel-title fxLayout="row" fxLayoutAlign="center">
-                <span >Contact Me</span>
-            </mat-panel-title>
-        </mat-expansion-panel-header>
-        <mat-icon fxLayoutAlign="start" class="back-arrow" (click)="goBack()">keyboard_arrow_left</mat-icon>
 
-      <form [formGroup]="contactMeForm" fxLayout="column">
-          <mat-form-field class="form-field">
-            <mat-label>Your email</mat-label>
-            <input class="email" formControlName="email" type="text" name="_replyto" placeholder="your@email.com" matInput required/>
+
+
+<h2 mat-dialog-title>Contact Me</h2>
+<mat-dialog-content>
+    <form [formGroup]="contactMeForm" fxLayout="column">
+        <mat-form-field class="form-field">
+          <mat-label>Your email</mat-label>
+          <input class="email" formControlName="email" type="text" name="_replyto" placeholder="your@email.com" matInput required/>
+        </mat-form-field>
+        <mat-form-field class="form-field">
+              <mat-label>Message:</mat-label>
+              <textarea 
+                  class="message" 
+                  formControlName="message" 
+                  type="text" name="_replyto" 
+                  placeholder="say hi!" 
+                  matInput 
+                  required
+                  cdkAutosizeMinRows="1"
+                  cdkAutosizeMaxRows="5"></textarea>
           </mat-form-field>
-          <mat-form-field class="form-field">
-                <mat-label>Message:</mat-label>
-                <textarea 
-                    class="message" 
-                    formControlName="message" 
-                    type="text" name="_replyto" 
-                    placeholder="say hi!" 
-                    matInput 
-                    required
-                    cdkAutosizeMinRows="1"
-                    cdkAutosizeMaxRows="5"></textarea>
-            </mat-form-field>
 
-            <button mat-raised-button color="primary" fxLayoutAlign="center" type="submit" (click)="sendEmail()">Send</button>
-      </form>
-    </mat-expansion-panel>
-</mat-accordion>   
+          <button mat-raised-button color="primary" fxLayoutAlign="center" type="submit" (click)="sendEmail()"
+                  [mat-dialog-close]="true" cdkFocusInitial>Send</button>
+    </form>
+</mat-dialog-content>

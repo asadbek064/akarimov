@@ -48,71 +48,20 @@ export class ProjectViewComponent implements OnInit {
     ProjectDesc: 'Animet, is an anime cataloging application website. The site provides its users with a like system to find and score anime. Animet provides a large database with over 13,000 anime.',
     ProjectLink: { Link: 'https://www.animet.tk/', ButtonStatus: false },
     ProjectGithub: { Link: 'https://github.com/asadbek064/animet', ButtonStatus: false }
-  },
-  { ProjectTitle: 'Animet.tk',
-  CompanyName: 'Personal',
-  ImageSrc: [
-    { path: '/assets/image/animet_1.png' },
-    { path: '/assets/image/animet_2.png' },
-
-  ],
-  ImageSrc_mobile: '/assets/image/animet_mobile_1.png',
-  ProjectDesc: 'Animet, is an anime cataloging application website. The site provides its users with a like system to find and score anime. Animet provides a large database with over 13,000 anime.',
-  ProjectLink: { Link: 'https://www.animet.tk/', ButtonStatus: false },
-  ProjectGithub: { Link: 'https://github.com/asadbek064/animet', ButtonStatus: false }
-}, { ProjectTitle: 'Animet.tk',
-CompanyName: 'Personal',
-ImageSrc: [
-  { path: '/assets/image/animet_1.png' },
-  { path: '/assets/image/animet_2.png' },
-
-],
-ImageSrc_mobile: '/assets/image/animet_mobile_1.png',
-ProjectDesc: 'Animet, is an anime cataloging application website. The site provides its users with a like system to find and score anime. Animet provides a large database with over 13,000 anime.',
-ProjectLink: { Link: 'https://www.animet.tk/', ButtonStatus: false },
-ProjectGithub: { Link: 'https://github.com/asadbek064/animet', ButtonStatus: false }
-}
+  }
   ];
 
   pageChangeStatus = 'animate__animated animate__fadeInUp animate__fast';
   cardFlexSize!: string;
-  scrollCount = 0;
+ 
 
-  el: any;
+  constructor(public pagesService: PagesService ) { }
 
-  constructor(public pagesService: PagesService ) {
-    document.addEventListener('wheel', (e) => {
-      this.el = document.getElementById('projects');
-      if (this.el.scrollTop === 0) { // if at top of page
-        if (e.deltaY < 0) { // scroll up
-          this.scrollCount++;
-          if (this.scrollCount > 5) {
-            this.scrollCount = 0; // reset
-            this.OpenDevCard();
-          }
-      }
-      }
-    });
+  ngOnInit(): void { }
 
+  changeToDevView() {
+    window.scrollTo({top:0, left: 0, behavior: 'smooth'});
   }
-
-  ngOnInit(): void {
-  }
-
-  async OpenDevCard(): Promise<void> {
-    this.changeToDevView();
-    await this.delay(500);
-    this.pagesService.isProjectPage_Change.next(false);
-  }
-
-  // tslint:disable-next-line:typedef
-  delay(ms: number)  {
-    return new Promise( resolve => setTimeout(resolve, ms) );
-  }
-
-  changeToDevView(): void {
-    this.pageChangeStatus = 'animate__animated animate__fadeOutDown animate__faster';
-}
 
 
 }

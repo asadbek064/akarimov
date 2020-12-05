@@ -1,13 +1,11 @@
       
-       
-<div class="main_view">
+  <div class="main_view">
     <div id="stars"></div>
     <div id="stars2"></div>
     <div id="stars3"></div>
     <div id="title"></div>
-</div>
+</div>  
 
-<app-dev-card *ngIf="!(isProjectPage) === false; else projectView" ></app-dev-card>
- <ng-template #projectView>
-         <app-project-view id="projects"></app-project-view>
-</ng-template>
+<app-dev-card></app-dev-card>
+
+<app-project-view #projectView></app-project-view>

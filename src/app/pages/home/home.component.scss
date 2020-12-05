@@ -6,10 +6,16 @@
 @media only screen and (max-width: 600px) {
 
 }
+
+#projectView {
+	overflow: auto;
+    display: flex;
+    flex-direction: column;
+}
 .main_view {
 	height: 100%;
 	width: 100%;
-	position:fixed;
+	position: fixed;
     z-index:-1;
 	background: radial-gradient(ellipse at bottom, #17222e 0%, #090A0F 115%);
 }

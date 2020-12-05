@@ -1,5 +1,4 @@
-<ng-container *ngIf="!(contactMeStatus | async); else elseTemplate" >
-    <div  class="container"  #main_view>
+     <div  class="container"  #main_view fxLayout="column">
         <div class="card" [ngClass]="pageChangeStatus" >
             <div class="section" >
                 <img class="avatarImg"  height="100" width="100" src="https://f000.backblazeb2.com/file/public-data/avatar_sm.png" alt="avatar_img">
@@ -19,21 +18,19 @@
             <div class="section sub">
                 <div class="summary">I'm a web developer who loves building amazing fully fledged web applications.</div>
             </div>
-        
+            
             <div class="section contactBtn " (click)="ContactMe()">
                 <a><i class="fa fa-envelope"></i> Contact Me</a>
             </div>
         </div>
+        
+  
     
-        <div class="scroll-indicator" (click)="OpenProject()"[matTooltipPosition]="'above'" matTooltip="Projects">
-            <div class="dots"></div>
-        </div>
     
+        
     </div>    
-</ng-container>
-<ng-template #elseTemplate>
-    <div class="contactMeWrapper">
-        <app-contact-me class="animate__animated animate__fadeIn faster" fxLayoutAlign="center"></app-contact-me>
-    </div>
-</ng-template>
+            <div class="scroll-indicator" (click)="OpenProject()"[matTooltipPosition]="'above'" matTooltip="Projects">
+                <div class="dots"></div>
+            </div>
+
 
