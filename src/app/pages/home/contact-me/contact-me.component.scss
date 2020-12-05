@@ -1,5 +1,5 @@
 mat-dialog-content {
-    width: 500px;
+    min-width: 300px;
   form {
       width: 100%;
      
@@ -14,11 +14,12 @@ mat-dialog-content {
 
 
 .email {
-    width: 30vw;
+   width: 100% ;
 }
 .message {
-    height: 15vh;
-    width: 30vw;
+    width: 100%;
+    min-height: 150px;
+    height: auto;
     resize: none;
 }
 .email, .message {
@@ -36,5 +37,9 @@ mat-dialog-content {
 @media only screen and (max-width: 600px) {
     .email, .message {
         width: 100%;
+    }
+
+    mat-dialog-content {
+        min-width: 250px;
     }
 }
