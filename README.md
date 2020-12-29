@@ -1,2 +1,2 @@
-# [akarimov](https://www.akarimov.com/)
+# [akarimov.com](https://www.akarimov.com/)
 ### Personal Portfolio Website
