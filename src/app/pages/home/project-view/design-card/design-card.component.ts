@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { BreakpointObserver, Breakpoints}  from '@angular/cdk/layout';
 import { Button } from '../project-view.component';
 
@@ -7,20 +7,17 @@ export interface ImgSrc {
 }
 
 @Component({
-  selector: 'app-project-card',
-  templateUrl: './project-card.component.html',
-  styleUrls: ['./project-card.component.scss']
+  selector: 'app-design-card',
+  templateUrl: './design-card.component.html',
+  styleUrls: ['./design-card.component.scss']
 })
-
-export class ProjectCardComponent implements OnInit {
-
-  @Input() ProjectTitle!: string;
+export class DesignCardComponent implements OnInit {
+  @Input() DesignTitle!: string;
   @Input() CompanyName!: string;
   @Input() ImageSrc!: ImgSrc[];
   @Input() ImageSrc_mobile!: string;
-  @Input() ProjectDesc!: string;
-  @Input() ProjectLink!: Button;
-  @Input() ProjectGithub!: Button;
+  @Input() DesignDesc!: string;
+  @Input() DesignLink!: Button;
 
   isMobile: boolean;
   constructor( breakpointObserver: BreakpointObserver ) {
@@ -40,5 +37,4 @@ export class ProjectCardComponent implements OnInit {
   }
   ngOnInit(): void {
   }
-
 }

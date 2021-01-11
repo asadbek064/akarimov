@@ -1,8 +1,4 @@
-
-
- mat-card {
-    width: 500px;
-    height: 500px;
+mat-card {
     margin: 1rem;
 }
 
@@ -11,15 +7,8 @@ mat-card-content{
     line-height: 2;
 }
 
-
-.mobile_thumbnail > img {
-  height: auto;
-}
-
-.buttons {
-  position: absolute;
-  bottom: 25px;
-  width: 100%;
+.button {
+    margin: 20px;
 }
 
 /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
@@ -30,9 +19,7 @@ mat-card-content{
   and (max-device-width: 667px) 
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) { 
-    mat-card {
-        height: auto;
-    }
+    
 }
 
 

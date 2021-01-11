@@ -1,8 +1,6 @@
      <div  class="container"  #main_view fxLayout="column">
-        <div class="card" [ngClass]="pageChangeStatus" >
-            <div class="section" >
-                <img class="avatarImg"  height="100" width="100" src="https://f000.backblazeb2.com/file/public-data/avatar_sm.png" alt="avatar_img">
-            
+        <div class="card" [ngClass]="pageChangeStatus"  >
+            <div class="cardSection">
                 <div class="quickInfoWrapper">
                     <div class="name">Asadbek Karimov</div>
                     <div class="job-title">Full-Stack Developer</div>
@@ -23,10 +21,8 @@
                 <a><i class="fa fa-envelope"></i> Contact Me</a>
             </div>
         </div>
-        
-  
     
-    
+        <div class="titleProject">Projects & Designs</div>
         
     </div>    
             <div class="scroll-indicator" (click)="OpenProject()"[matTooltipPosition]="'above'" matTooltip="Projects">

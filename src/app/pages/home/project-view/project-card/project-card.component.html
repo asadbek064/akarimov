@@ -16,10 +16,10 @@
         <div *ngIf="isMobile" fxLayoutAlign="center" class="mobile_thumbnail" (click)="goToLink(ProjectLink.Link)">
             <img src="{{ ImageSrc_mobile }}" alt="" width="200">
         </div>
-        <mat-card-content>
+        <mat-card-content >
             {{ ProjectDesc }}
         </mat-card-content>
-        <mat-card-actions fxLayoutAlign="space-around" fxLayout="row">
+        <mat-card-actions fxLayoutAlign="space-around" fxLayout="row" class="buttons">
             <button 
                 mat-raised-button color="primary" 
                 fxFlex="30%" 

@@ -1,11 +1,16 @@
 
     <div [ngClass]="pageChangeStatus" fxLayout="column">
     
-        <div class="title">Projects</div>
         <div class="content"
-            id="content"  
-            fxLayoutAlign="center"
-            fxLayout="column" 
+        id="content"  
+        fxLayoutAlign="center"
+        fxLayout="column" 
+        >   
+        <div class="title">Projects</div>
+            <div class="projects_view section" 
+                fxLayout="row wrap" 
+                fxLayout.lt-lg="column" 
+                fxLayoutAlign.lt-xl="center" 
             >
                 <app-project-card
                     id="projects"
@@ -18,13 +23,33 @@
                     [ProjectLink] = "PROJECTS_LIST.ProjectLink"
                     [ProjectGithub] = "PROJECTS_LIST.ProjectGithub"
                 ></app-project-card>    
-      
+            </div>
+
+
+        <div class="title">UI/UX and Designs</div>
+            <div class="designs_view section" 
+                fxLayout="row wrap" 
+                fxLayout.lt-lg="column" 
+                fxLayoutAlign.lt-xl="center" 
+            >
+                <app-design-card
+                    id="designs"
+                    *ngFor="let DESIGNS_LIST of DESIGNS_LIST"
+                    [DesignTitle] = "DESIGNS_LIST.DesignTitle"
+                    [CompanyName] = "DESIGNS_LIST.CompanyName"
+                    [ImageSrc] = "DESIGNS_LIST.ImageSrc"
+                    [ImageSrc_mobile] = "DESIGNS_LIST.ImageSrc_mobile"
+                    [DesignDesc] = "DESIGNS_LIST.DesignDesc"
+                    [DesignLink] = "DESIGNS_LIST.DesignLink"
+                ></app-design-card>
+            </div>
         </div>
         
-            <div id="backBtn">
+           <!--  <div id="backBtn">
                 <div class="scroll-indicator" (click)="changeToDevView()">
                     <div class="dots"></div>
                 </div>
-            </div>
+            </div> -->
     </div>
+ 
  

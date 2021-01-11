@@ -7,12 +7,17 @@
 .content {
 	margin: 10px;
 }
+.section {
+	margin-bottom: 100px;
+}
 
 .title {
-    font-size: xx-large;
+	font-size: xx-large;
+	font-weight: bold;
     color: white;
     text-align: center;
-    margin: 2.5rem;
+	margin: 2.5rem;
+	line-height: 1.6;
 }
 
 #backBtn {

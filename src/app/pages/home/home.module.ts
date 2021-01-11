@@ -11,6 +11,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { IvyCarouselModule} from 'angular-responsive-carousel';
 import { ContactMeComponent } from './contact-me/contact-me.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { DesignCardComponent } from './project-view/design-card/design-card.component';
 
 const COMPONENTS = [
     HomeComponent,
@@ -30,7 +31,7 @@ const MODULES = [
 ];
 
 @NgModule({
-    declarations: [ ...COMPONENTS, ProjectCardComponent, ContactMeComponent],
+    declarations: [ ...COMPONENTS, ProjectCardComponent, ContactMeComponent, DesignCardComponent],
     imports: [ ...MODULES],
 })
 export class HomeModule { }
