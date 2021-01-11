@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   styleUrls: ['pages.component.scss'],
   template: `
     <div class="main-view" fxLayout="column">
+    <div class="background_effect"></div>
       <router-outlet></router-outlet>
     </div>
   `,
