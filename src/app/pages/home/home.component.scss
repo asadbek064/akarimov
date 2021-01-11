@@ -13,6 +13,20 @@
     flex-direction: column;
 }
 
+.background_effect{
+	height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 0;
+	/* background: radial-gradient(ellipse at bottom, #2a3d52 0%, #090A0F 115%); */
+
+	background: -o-linear-gradient(135deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	opacity: 60%;
+	background-size: 200% 200%;
+	-webkit-animation: gradient 20s ease infinite;
+	        animation: gradient 20s ease infinite;
+}
 
 
 
