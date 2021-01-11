@@ -70,7 +70,7 @@ export class ProjectViewComponent implements OnInit {
       CompanyName: 'MMS EXPRESS',
       ImageSrc: [
         { path: '/assets/image/mms_express_ad.jpg'},
-        { path: '/assets/image/mms_express_logo.png  '},
+        { path: '/assets/image/mms_express_logo.png'},
       ],
       ImageSrc_mobile: '/assets/image/mms_express_ad.jpg',
       DesignDesc: 'created logo and advert for mms trucking company using adobe illustrator and photoshop.',
