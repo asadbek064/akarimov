@@ -39,11 +39,12 @@ export class ProjectViewComponent implements OnInit {
       ProjectTitle: 'PieShares.com',
       CompanyName: 'PieShares, Inc',
       ImageSrc: [
-        { path: '/assets/image/pshares_1.png' },
-        { path: '/assets/image/pshares_2.png' },
-        { path: '/assets/image/pshares_3.png' },
+        { path: 'https://f000.backblazeb2.com/file/public-data/akarimov/pshares_1.png' },
+        { path: 'https://f000.backblazeb2.com/file/public-data/akarimov/pshares_2.png' },
+        { path: 'https://f000.backblazeb2.com/file/public-data/akarimov/pshares_3.png' },
+        { path: 'https://f000.backblazeb2.com/file/public-data/akarimov/pshares_4.png' },
       ],
-      ImageSrc_mobile: '/assets/image/pshares_mobile_1.png',
+      ImageSrc_mobile: 'https://f000.backblazeb2.com/file/public-data/akarimov/pshares_mobile_1.png',
       ProjectDesc: 'Web based marketplace that brings Nonprofits, Businesses and Shoppers together',
       ProjectLink: { Link: 'https://www.pieshares.com/', ButtonStatus: false },
       ProjectGithub: { Link: '', ButtonStatus: true }
@@ -53,8 +54,8 @@ export class ProjectViewComponent implements OnInit {
       ProjectTitle: 'Animet.tk',
       CompanyName: 'Personal',
       ImageSrc: [
-        { path: '/assets/image/animet_1.png' },
-        { path: '/assets/image/animet_2.png' },
+        { path: 'https://f000.backblazeb2.com/file/public-data/akarimov/animet_2.png' },
+        { path: 'https://f000.backblazeb2.com/file/public-data/akarimov/animet_1.png' },
 
       ],
       ImageSrc_mobile: '/assets/image/animet_mobile_1.png',
@@ -69,10 +70,10 @@ export class ProjectViewComponent implements OnInit {
       DesignTitle: 'Logo Design / Ad Design',
       CompanyName: 'MMS EXPRESS',
       ImageSrc: [
-        { path: '/assets/image/mms_express_ad.jpg'},
-        { path: '/assets/image/mms_express_logo.png'},
+        { path: 'https://f000.backblazeb2.com/file/public-data/akarimov/mms_express_ad.jpg'},
+        { path: 'https://f000.backblazeb2.com/file/public-data/akarimov/mms_express_logo.png'},
       ],
-      ImageSrc_mobile: '/assets/image/mms_express_ad.jpg',
+      ImageSrc_mobile: 'https://f000.backblazeb2.com/file/public-data/akarimov/mms_express_ad.jpg',
       DesignDesc: 'created logo and advert for mms trucking company using adobe illustrator and photoshop.',
       DesignLink: { Link: 'https://f000.backblazeb2.com/file/public-data/MMS_EXPRESS_HIRING_FULL_AD-01.png', ButtonStatus: false},
     },
