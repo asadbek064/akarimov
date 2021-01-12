@@ -5,28 +5,38 @@
                     <div class="name">Asadbek Karimov</div>
                     <div class="job-title">Full-Stack Developer</div>
                     <div class="links" >
-                        <a class="link-item fa fa-github" href="https://github.com/asadbek064"></a>
-                        <a class="link-item fa fa-stack-overflow" href="https://stackoverflow.com/users/8628497/karimov"></a>
-                        <a class="link-item fa fa-linkedin" href="https://www.linkedin.com/in/asadbekkarimov/"></a>
-                        <a class="link-item fa fa-file" style="font-size: 14.5pt;" href="https://f000.backblazeb2.com/file/public-data/Asadbek_Karimov_Resume_MDRN.pdf"></a>
+                        <a class="link-item" href="https://github.com/asadbek064"  matTooltip="GitHub" [matTooltipPosition]="'above'">
+                            <img class="icon-img" src="../../../../assets/icons/github.svg"/>
+                        </a>
+                        <a class="link-item" href="https://stackoverflow.com/users/8628497/karimov"  matTooltip="Stack Overflow" [matTooltipPosition]="'above'">
+                            <img class="icon-img" src="../../../../assets/icons/stack-overflow.svg"/>
+                        </a>
+                        <a class="link-item" href="https://www.linkedin.com/in/asadbekkarimov/"  matTooltip="Linkedin" [matTooltipPosition]="'above'">
+                            <img class="icon-img" src="../../../../assets/icons/linkedin.svg"/>
+                        </a>
+                        <a class="link-item" href="https://f000.backblazeb2.com/file/public-data/Asadbek_Karimov_Resume_MDRN.pdf"  matTooltip="Resume Open" [matTooltipPosition]="'above'">
+                            <img class="icon-img" src="../../../../assets/icons/resume.svg"/>
+                        </a>
                     </div>
                 </div>
             </div>
-        
-            <div class="section sub">
-                <div class="summary">I'm a web developer who loves building amazing fully fledged web applications.</div>
-            </div>
             
-            <div class="section contactBtn " (click)="ContactMe()">
-                <a><i class="fa fa-envelope"></i> Contact Me</a>
+            <div class="sectionExtra" fxLayout="column" fxLayoutAlign="start start">
+                <div class="section sub">
+                    <div class="summary">I'm a web developer who loves building amazing fully fledged web applications.</div>
+                </div>
+                
+                <div class="section contactBtn " (click)="ContactMe()">
+                    <a><i class="fa fa-envelope"></i> Contact Me</a>
+                </div>
             </div>
         </div>
     
         <div class="titleProject">Projects & Designs</div>
         
+        <div class="scroll-indicator" (click)="OpenProject()"[matTooltipPosition]="'above'" matTooltip="Projects">
+            <div class="dots"></div>
+        </div>
+        
     </div>    
-            <div class="scroll-indicator" (click)="OpenProject()"[matTooltipPosition]="'above'" matTooltip="Projects">
-                <div class="dots"></div>
-            </div>
-
 

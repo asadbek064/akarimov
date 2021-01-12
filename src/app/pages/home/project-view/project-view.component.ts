@@ -44,7 +44,7 @@ export class ProjectViewComponent implements OnInit {
         { path: 'https://f000.backblazeb2.com/file/public-data/akarimov/pshares_3.png' },
         { path: 'https://f000.backblazeb2.com/file/public-data/akarimov/pshares_4.png' },
       ],
-      ImageSrc_mobile: 'https://f000.backblazeb2.com/file/public-data/akarimov/pshares_mobile_1.png',
+      ImageSrc_mobile: 'https://f000.backblazeb2.com/file/public-data/akarimov/pieshares-logo.png',
       ProjectDesc: 'Web based marketplace that brings Nonprofits, Businesses and Shoppers together',
       ProjectLink: { Link: 'https://www.pieshares.com/', ButtonStatus: false },
       ProjectGithub: { Link: '', ButtonStatus: true }
@@ -59,7 +59,7 @@ export class ProjectViewComponent implements OnInit {
 
       ],
       ImageSrc_mobile: '/assets/image/animet_mobile_1.png',
-      ProjectDesc: 'Animet, is an anime cataloging application website. The site provides its users with a like system to find and score anime. Animet provides a large database with over 13,000 anime.',
+      ProjectDesc: 'Animet, is an anime cataloging application website. The site provides its users with a like system to find and score anime.',
       ProjectLink: { Link: 'https://www.animet.tk/', ButtonStatus: false },
       ProjectGithub: { Link: 'https://github.com/asadbek064/animet', ButtonStatus: false }
     }

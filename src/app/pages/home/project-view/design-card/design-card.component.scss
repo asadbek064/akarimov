@@ -5,6 +5,9 @@ mat-card {
 mat-card-content{
     margin: 0.5rem;
     line-height: 2;
+    font-size: medium;
+    font-weight:lighter;
+    padding-top: 2.5%;
 }
 
 .button {
@@ -16,6 +19,20 @@ mat-card {
               0 2px 2px rgba(0,0,0,0.15), 
               0 4px 4px rgba(0,0,0,0.15), 
               0 8px 8px rgba(0,0,0,0.15)!important;
+  margin: 1rem;
+  /* galssmorphism */
+  background: rgba( 255, 255, 255, 0.60 );
+  backdrop-filter: blur( 2.0px );
+  -webkit-backdrop-filter: blur( 2.0px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+mat-card-title {
+  font-weight: bold;
+  color:#353839;
+  font-size: x-large!important;
+  line-height: 1.4;
 }
 
 /* ----------- iPhone 6, 6S, 7 and 8 ----------- */

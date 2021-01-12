@@ -9,14 +9,17 @@
             <carousel
                 [height]="300"
                 [cellsToShow]="1"
-                [images]="ImageSrc">
+                [images]="ImageSrc"
+                [loop]="true"
+                [dots]="true"
+                >
             </carousel>
         </div>
 
         <div *ngIf="isMobile" fxLayoutAlign="center" class="mobile_thumbnail" (click)="goToLink(ProjectLink.Link)">
-            <img src="{{ ImageSrc_mobile }}" alt="" width="200">
+            <img src="{{ ImageSrc_mobile }}" alt="project_logo" width="150" height="150">
         </div>
-        <mat-card-content >
+        <mat-card-content>
             {{ ProjectDesc }}
         </mat-card-content>
         <mat-card-actions fxLayoutAlign="space-around" fxLayout="row" class="buttons">
