@@ -1,3 +1,6 @@
+.main_view {
+	margin-bottom: 5rem;
+}
 .content {
 	margin: 10px;
 }
@@ -19,15 +22,13 @@
 }
 /* scroll indicator */
 .scroll-indicator {
-    transform: rotate(180deg);
-	width: 12px;
+	transform: rotate(180deg);
+	width: 20px;
     margin: 0 auto;
-
     left: 0;
     bottom: 0;
     width: 100%;
-    margin-bottom: 5rem;
-
+	position: absolute;
 	opacity: .5;
 	&::before,
 	&::after {
@@ -37,19 +38,19 @@
 		margin-right: auto;
 	}
 	&::before {
-		width: 12px;
-		height: 12px;
+		width: 20px;
+		height: 20px;
 		border-radius: 10px;
-		border: 1px solid #fff;
-		animation: dot 3s infinite ease-in-out;
+		border: 3px solid #fff;
+		animation: dot 1.8s infinite ease-in-out;
 	}
 	&::after {
-		width: 7px;
-		height: 7px;
-		border-right: 1px solid #fff;
-		border-bottom: 1px solid #fff;
+		width: 10px;
+		height: 10px;
+		border-right: 2px solid #fff;
+		border-bottom: 2px solid #fff;
 		transform: rotate(45deg);
-		animation: arrow 3s infinite ease-in-out;
+		animation: arrow 1.8s infinite ease-in-out;
 		animation-delay: .75s;
 		opacity: .25;
 	}
@@ -60,18 +61,18 @@
 			content: '';
 			display: block;
 			margin: 5px auto;
-			border-radius: 10px;
-			border: 1px solid #fff;
-			animation: dot 3s infinite ease-in-out;
+			border-radius: 20px;
+			border: 3px solid #fff;
+			animation: dot 1.8s infinite ease-in-out;
 		}
 		&::before {
-			width: 8px;
-			height: 8px;
+			width: 10px;
+			height: 10px;
 			animation-delay: .25s;
 		}
 		&::after {
-			width: 6px;
-			height: 6px;
+			width: 10px;
+			height: 10px;
 			animation-delay: .5s;
 		}
 	}

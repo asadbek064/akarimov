@@ -16,7 +16,10 @@ import { DesignCardComponent } from './project-view/design-card/design-card.comp
 const COMPONENTS = [
     HomeComponent,
     ProjectViewComponent,
-    DevCardComponent
+    DevCardComponent,
+    ProjectCardComponent,
+    ContactMeComponent,
+    DesignCardComponent
 ];
 
 const MODULES = [
@@ -31,7 +34,7 @@ const MODULES = [
 ];
 
 @NgModule({
-    declarations: [ ...COMPONENTS, ProjectCardComponent, ContactMeComponent, DesignCardComponent],
+    declarations: [ ...COMPONENTS],
     imports: [ ...MODULES],
 })
 export class HomeModule { }

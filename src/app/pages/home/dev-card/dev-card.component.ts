@@ -45,4 +45,6 @@ export class DevCardComponent implements OnInit {
     this.pagesService.sendEmailStatus_Change.next(false);
     this.openDialog();
   }
+
+
 }
