@@ -35,6 +35,13 @@ mat-card-title {
   line-height: 1.4;
 }
 
+.mobile_thumbnail {
+  height: 300px
+}
+.mobile_thumbnail > img {
+  border-radius: 10px;
+}
+
 /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
 
 /* Portrait */

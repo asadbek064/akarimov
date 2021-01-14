@@ -44,7 +44,7 @@ export class ProjectViewComponent implements OnInit {
         { path: 'https://f000.backblazeb2.com/file/public-data/akarimov/pshares_3.png' },
         { path: 'https://f000.backblazeb2.com/file/public-data/akarimov/pshares_4.png' },
       ],
-      ImageSrc_mobile: 'https://f000.backblazeb2.com/file/public-data/akarimov/pieshares-logo-m.png',
+      ImageSrc_mobile: 'https://f000.backblazeb2.com/file/public-data/akarimov/pshares_mobile.png',
       ProjectDesc: 'Web based marketplace that brings Nonprofits, Businesses and Shoppers together',
       ProjectLink: { Link: 'https://www.pieshares.com/', ButtonStatus: false },
       ProjectGithub: { Link: '', ButtonStatus: true }

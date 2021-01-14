@@ -35,8 +35,12 @@ mat-card-content{
 }
 
 
+.mobile_thumbnail {
+  height: 100px;
+}
+
 .mobile_thumbnail > img {
-  height: auto;
+  border-radius: 10px;
 }
 
 .buttons {
