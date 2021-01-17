@@ -122,7 +122,7 @@ $button-color: #000000;
     color: white;
 }
 
-.contactBtn >a {
+.contactBtn > div{
   @include center;
   text-decoration: none;
   cursor: pointer;

@@ -5,37 +5,36 @@
             <mat-card-subtitle>{{ CompanyName}}</mat-card-subtitle>
         </mat-card-header>
 
-        <div *ngIf="(isMobile) === false">
+        <div >
             <carousel
                 [height]="300"
                 [cellsToShow]="1"
                 [images]="ImageSrc"
-                [loop]="true"
                 [dots]="true"
                 >
             </carousel>
         </div>
 
-        <div *ngIf="isMobile" fxLayoutAlign="center" class="mobile_thumbnail" (click)="goToLink(ProjectLink.Link)">
+       <!--  <div *ngIf="isMobile" fxLayoutAlign="center" class="mobile_thumbnail" (click)="goToLink(ProjectLink.Link)">
             <img src="{{ ImageSrc_mobile }}" alt="project-logo" width="300">
-        </div>
+        </div> -->
         <mat-card-content>
             {{ ProjectDesc }}
+            <mat-card-actions fxLayoutAlign="space-around" fxLayout="row" class="buttons">
+                <button 
+                    mat-raised-button color="primary" 
+                    fxFlex="30%" 
+                    [disabled]="ProjectLink.ButtonStatus"
+                    (click)="goToLink(ProjectLink.Link)"
+                > <i class="fa fa-mouse-pointer"></i> LIVE</button>
+                <button 
+                    mat-raised-button 
+                    fxFlex="30%" 
+                    [disabled]="ProjectGithub.ButtonStatus"
+                    (click)="goToLink(ProjectGithub.Link)"
+                > <i class="fa fa-github"></i> CODE</button>
+              </mat-card-actions>
         </mat-card-content>
-        <mat-card-actions fxLayoutAlign="space-around" fxLayout="row" class="buttons">
-            <button 
-                mat-raised-button color="primary" 
-                fxFlex="30%" 
-                [disabled]="ProjectLink.ButtonStatus"
-                (click)="goToLink(ProjectLink.Link)"
-            > <i class="fa fa-mouse-pointer"></i> LIVE</button>
-            <button 
-                mat-raised-button 
-                fxFlex="30%" 
-                [disabled]="ProjectGithub.ButtonStatus"
-                (click)="goToLink(ProjectGithub.Link)"
-            > <i class="fa fa-github"></i> CODE</button>
-          </mat-card-actions>
     </mat-card>
 
 </div>

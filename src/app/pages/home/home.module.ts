@@ -8,7 +8,7 @@ import { DevCardComponent } from './dev-card/dev-card.component';
 import { ProjectViewComponent } from './project-view/project-view.component';
 import { ProjectCardComponent } from './project-view/project-card/project-card.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { IvyCarouselModule} from 'angular-responsive-carousel';
+import { IvyCarouselModule} from 'ng-carousel-ak';
 import { ContactMeComponent } from './contact-me/contact-me.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { DesignCardComponent } from './project-view/design-card/design-card.component';

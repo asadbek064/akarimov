@@ -42,6 +42,15 @@ mat-card-title {
   border-radius: 10px;
 }
 
+
+
+@media only screen and (max-width: 600px) { 
+
+  mat-card-content {
+    font-size: small;
+  }
+}
+
 /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
 
 /* Portrait */

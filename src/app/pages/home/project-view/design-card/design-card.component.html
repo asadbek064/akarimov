@@ -8,19 +8,19 @@
             <mat-card-subtitle>{{ CompanyName}}</mat-card-subtitle>
         </mat-card-header>
 
-        <div *ngIf="(isMobile) === false">
+        <div >
             <carousel
-                [height]="270"
+                [height]="300"
                 [cellsToShow]="1"
                 [images]="ImageSrc"
-                [loop]="true"
+                [dots]="true"
             >
             </carousel>
         </div>
 
-        <div *ngIf="isMobile" fxLayoutAlign="center" class="mobile_thumbnail" (click)="goToLink(DesignLink.Link)">
+        <!-- <div *ngIf="isMobile" fxLayoutAlign="center" class="mobile_thumbnail" (click)="goToLink(DesignLink.Link)">
             <img src="{{ ImageSrc_mobile }}" alt="UI/UX_work_thumbnail" width="300" >
-        </div>
+        </div> -->
         <mat-card-content >
             {{ DesignDesc }}
         </mat-card-content>

@@ -4,6 +4,7 @@ import { Button } from '../project-view.component';
 
 export interface ImgSrc {
   path: string;
+  alt?: string;
 }
 
 @Component({
@@ -24,6 +25,7 @@ export class ProjectCardComponent implements OnInit {
 
   isMobile: boolean;
   constructor( breakpointObserver: BreakpointObserver ) {
+    
     this.isMobile = false;
 
     // dectec wheter its mobile device
@@ -40,5 +42,7 @@ export class ProjectCardComponent implements OnInit {
   }
   ngOnInit(): void {
   }
+
+
 
 }
