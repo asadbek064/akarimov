@@ -1,5 +1,6 @@
 mat-card {
     margin: 1rem;
+    width: 500px;
 }
 
 mat-card-content{
@@ -35,9 +36,6 @@ mat-card-title {
   line-height: 1.4;
 }
 
-.mobile_thumbnail {
-  height: 300px
-}
 .mobile_thumbnail > img {
   border-radius: 10px;
 }
