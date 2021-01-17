@@ -91,9 +91,6 @@ MIT
 @angular/router
 MIT
 
-angular-responsive-carousel
-Apache License 2.0
-
 css-loader
 MIT
 Copyright JS Foundation and other contributors
@@ -117,6 +114,8 @@ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+
+ng-carousel-ak
 
 rxjs
 Apache-2.0
