@@ -5,9 +5,19 @@
             <mat-card-subtitle>{{ CompanyName}}</mat-card-subtitle>
         </mat-card-header>
 
-        <div >
+        <div *ngIf="!isMobile" >
             <carousel
-                [height]="300"
+                [height]="500"
+                [cellsToShow]="1"
+                [images]="ImageSrc"
+                [dots]="true"
+                >
+            </carousel>
+        </div>
+
+        <div *ngIf="isMobile">
+            <carousel
+                [height]="200"
                 [cellsToShow]="1"
                 [images]="ImageSrc"
                 [dots]="true"

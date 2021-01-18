@@ -1,9 +1,9 @@
 
 
  mat-card {
-    width: 500px;
-    min-height: 625px;
-    margin: 1rem;
+   width: 400px;
+   min-height: 500px;
+   margin: 1rem;
     
     /* galssmorphism */
 
@@ -48,7 +48,6 @@ mat-card-content{
   bottom: 25px;
   width: 100%;
 }
-
 
 @media only screen and (max-width: 600px) { 
 
@@ -98,7 +97,7 @@ mat-card-content{
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: portrait) { 
     mat-card {
-        min-height: 400px;
+        min-height: 500px;
     }
     
 }
