@@ -19,7 +19,7 @@ export const _PROJECTS_LIST: Projects[]  = [
     },
 
     {
-        ProjectTitle: 'Nov video call',
+        ProjectTitle: 'Nox video call',
         CompanyName: 'Personal',
         ImageSrc: [
             { path: '../../../../assets/image/nox-desktop-1.jpg', alt: 'nox thumbnail 1'},
