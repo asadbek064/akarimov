@@ -115,6 +115,7 @@ $button-color: #000000;
 }
 
 .titleProject {
+    margin-top: 10px;
     font-size: xx-large;
     font-weight: bold;
     position: absolute;
@@ -267,6 +268,15 @@ $button-color: #000000;
     and (max-width: 600px) {
     iframe {
         pointer-events: none;
+    }
+
+    .contactBtn > div {
+        margin-top: -15px;
+    }
+
+    .summary {
+        text-align: center;
+        
     }
 }
 /* Portrait iPhone X*/
