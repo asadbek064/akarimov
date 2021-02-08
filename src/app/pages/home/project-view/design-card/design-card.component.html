@@ -8,7 +8,6 @@
         </mat-card-header>
 
         <div >
-            <!-- 300x400 -->
             <carousel
                 [height]="300"
                 [cellsToShow]="1"
@@ -30,7 +29,7 @@
                 mat-raised-button color="primary" 
                 [disabled]="DesignLink.ButtonStatus"
                 (click)="goToLink(DesignLink.Link)"
-            > <i class="fa fa-mouse-pointer"></i>FULL SIZE</button>
+            > <i class="fa fa-mouse-pointer"></i>{{ DesignLink.BtnName }}</button>
           </mat-card-actions>
     </mat-card>
 

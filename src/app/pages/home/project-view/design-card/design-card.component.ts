@@ -17,7 +17,7 @@ export class DesignCardComponent implements OnInit {
   @Input() ImageSrc!: ImgSrc[];
   @Input() ImageSrc_mobile!: string;
   @Input() DesignDesc!: string;
-  @Input() DesignLink!: Button;
+  @Input() DesignLink!: Button; 
 
   isMobile: boolean;
   constructor( breakpointObserver: BreakpointObserver ) {

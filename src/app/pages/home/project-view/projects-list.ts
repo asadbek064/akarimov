@@ -30,7 +30,7 @@ export const _PROJECTS_LIST: Projects[]  = [
             { path: '../../../../assets/image/nox-mobile-3.jpg', alt: 'nox  mobile thumbnail 3'},
         ],
         ImageSrc_mobile: '',
-        ProjectDesc: 'Nox is a real-time communication app for the web. It uses WebRTC technology to create a real-time, peer-to-peer, media exchange connection between two devices.',
+        ProjectDesc: 'Nox is a real-time communication app for the web. It uses WebRTC technology to create a real-time, peer-to-peer connection between two devices.',
         ProjectLink: { Link: 'https://nox-videochat-ng.web.app/', ButtonStatus: false },
         ProjectGithub: { Link: 'https://github.com/asadbek064/nox-WebRTC-videocalls', ButtonStatus: false },
     },
@@ -60,13 +60,29 @@ export const  _DESIGNS_LIST: Designs[] = [
       ],
       ImageSrc_mobile: '',
       DesignDesc: 'Created logo and advert for mms trucking company using adobe illustrator and photoshop.',
-      DesignLink: { Link: 'https://f000.backblazeb2.com/file/public-data/MMS_EXPRESS_HIRING_FULL_AD-01.png', ButtonStatus: false},
+      DesignLink: { Link: 'https://f000.backblazeb2.com/file/public-data/MMS_EXPRESS_HIRING_FULL_AD-01.png', ButtonStatus: false,  BtnName: 'VIEW'},
+    },
+    {
+      DesignTitle: 'Prototyping and App Design',
+      CompanyName: 'Personal',
+      ImageSrc: [
+        { path: '../../../../assets/image/ebusiness-cards-1.jpg', alt: 'eBusiness card design'},
+        { path: '../../../../assets/image/ebusiness-cards-2.jpg', alt: 'eBusiness card design'},
+        { path: '../../../../assets/image/ebusiness-cards-3.jpg', alt: 'eBusiness card design'},
+        { path: '../../../../assets/image/ebusiness-cards-4.jpg', alt: 'eBusiness card design'},
+        { path: '../../../../assets/image/ebusiness-cards-5.jpg', alt: 'eBusiness card design'},
+      
+      ],
+      ImageSrc_mobile: '',
+      DesignDesc: 'App layout Design and Low Fidelity Prototype created with figma and photoshop',
+      DesignLink: { Link: 'https://www.figma.com/file/mV9QR57nN7dFRAO8w4x9aI/eBusiness-Cards?node-id=0%3A1', ButtonStatus: false, BtnName: 'OPEN FIGMA'},
     },
   ]
 
   /*  CDN Img Hosting */
 /* export const _PROJECTS_LIST: Projects[]  = [
     { 
+      eBusiness-cards-1.jpg
       ProjectTitle: 'PieShares.com',
       CompanyName: 'PieShares, Inc',
       ImageSrc: [

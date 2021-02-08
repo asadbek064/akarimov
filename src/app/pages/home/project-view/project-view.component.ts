@@ -6,6 +6,7 @@ import { _DESIGNS_LIST, _PROJECTS_LIST } from './projects-list';
 export interface Button {
   Link: string;
   ButtonStatus: boolean;
+  BtnName?: string;
 }
 
 export interface Projects {
