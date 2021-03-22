@@ -1,7 +1,8 @@
-     <div class="blublesContainer" id="bubbleContainer">
+     <!-- <div class="blublesContainer" id="bubbleContainer">
          <iframe id="bkBubbles" src='https://asadbek064.github.io/threejs_3dbubles/' frameborder='0' width='100%' height='100%' title="background-blob"></iframe>
-     </div>
-     <div  class="container"  #main_view fxLayout="column">
+     </div> -->
+     
+    <div  class="container"  #main_view fxLayout="column">
         <div class="card" [ngClass]="pageChangeStatus"  >
             <div class="cardSection">
                 <div class="quickInfoWrapper">
@@ -17,14 +18,14 @@
                         <a class="link-item" href="https://www.linkedin.com/in/asadbekkarimov/"  matTooltip="Linkedin" [matTooltipPosition]="'above'">
                             <img class="icon-img" src="../../../../assets/icons/linkedin.svg" alt="icon-linkedin"/>
                         </a>
-                        <a class="link-item" href="https://f000.backblazeb2.com/file/public-data/Asadbek_Karimov_Resume_MDRN.pdf"  matTooltip="Resume Open" [matTooltipPosition]="'above'">
+                        <a class="link-item" target="_blank" href="https://drive.google.com/file/d/1AhYJc8lrySUYI-PHSKiHRQJ4pdT-ZWqi/view?usp=sharing"  matTooltip="Resume Open" [matTooltipPosition]="'above'">
                             <img class="icon-img" src="../../../../assets/icons/resume.svg" alt="icon-resume"/>
                         </a>
                     </div>
                 </div>
             </div>
             
-            <div class="sectionExtra" fxLayout="column" fxLayoutAlign="start start">
+            <div class="sectionExtra" fxLayout="column" fxLayoutAlign="center space-between">
                 <div class="section sub">
                     <div class="summary">I'm a web developer who loves building web applications.</div>
                 </div>
@@ -34,12 +35,20 @@
                 </div>
             </div>
         </div>
-    
-        <div class="titleProject">Projects & Designs</div>
-        
-        <div class="scroll-indicator" (click)="OpenProject()"[matTooltipPosition]="'above'" matTooltip="Projects">
+
+        <div 
+        class="tmp-scroll-indicator animate__animated animate__pulse animate__infinite	infinite"
+        (click)="OpenProject()"
+        [matTooltipPosition]="'above'" 
+        matTooltip="Projects I have worked on"
+        >
+        <mat-icon  [inline]="true">keyboard_arrow_down</mat-icon>
+    </div>
+    <div class="titleProject">Projects & Designs</div>
+
+        <!-- <div class="scroll-indicator" (click)="OpenProject()"[matTooltipPosition]="'above'" matTooltip="Projects">
             <div class="dots"></div>
-        </div>
-        
+        </div> -->
+
     </div>    
 
