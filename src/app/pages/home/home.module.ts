@@ -12,6 +12,7 @@ import { IvyCarouselModule} from 'ng-carousel-ak';
 import { ContactMeComponent } from './contact-me/contact-me.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { DesignCardComponent } from './project-view/design-card/design-card.component';
+import { AboutMeComponent } from './about-me/about-me.component';
 
 const COMPONENTS = [
     HomeComponent,
@@ -34,7 +35,7 @@ const MODULES = [
 ];
 
 @NgModule({
-    declarations: [ ...COMPONENTS ],
+    declarations: [ ...COMPONENTS, AboutMeComponent ],
     imports: [ ...MODULES],
 })
 export class HomeModule { }

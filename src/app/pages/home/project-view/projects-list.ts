@@ -3,6 +3,19 @@ import { Designs, Projects, Button } from './project-view.component';
 /* Local Serving img */
 
 export const _PROJECTS_LIST: Projects[]  = [
+  { 
+    ProjectTitle: 'Animet.tk',
+    CompanyName: 'Personal',
+    ImageSrc: [
+      { path: '../../../../assets/image/animet_2.jpg', alt: 'anime thubnail 1' },
+      { path: '../../../../assets/image/animet_1.jpg', alt: 'anime thubnail 2' },
+  
+    ],
+    ImageSrc_mobile: '',
+    ProjectDesc: 'Watch anime online in high quality for free. Watch anime subbed, anime dubbed online free. Update daily, fast streaming, no ads, no registration',
+    ProjectLink: { Link: 'https://www.animet.tk/', ButtonStatus: false },
+    ProjectGithub: { Link: 'https://github.com/asadbek064/animet', ButtonStatus: true }
+  },
     { 
       ProjectTitle: 'Pieshares.com',
       CompanyName: 'PieShares, Inc',
@@ -16,19 +29,6 @@ export const _PROJECTS_LIST: Projects[]  = [
       ProjectDesc: 'Web based marketplace that brings Nonprofits, Businesses and Shoppers together',
       ProjectLink: { Link: 'https://www.pieshares.com/', ButtonStatus: false },
       ProjectGithub: { Link: '', ButtonStatus: true }
-    },
-    { 
-      ProjectTitle: 'Animet.tk',
-      CompanyName: 'Personal',
-      ImageSrc: [
-        { path: '../../../../assets/image/animet_2.jpg', alt: 'anime thubnail 1' },
-        { path: '../../../../assets/image/animet_1.jpg', alt: 'anime thubnail 2' },
-
-      ],
-      ImageSrc_mobile: '',
-      ProjectDesc: 'Watch anime online in high quality for free. Watch anime subbed, anime dubbed online free. Update daily, fast streaming, no ads, no registration',
-      ProjectLink: { Link: 'https://www.animet.tk/', ButtonStatus: false },
-      ProjectGithub: { Link: 'https://github.com/asadbek064/animet', ButtonStatus: true }
     },
     
     {

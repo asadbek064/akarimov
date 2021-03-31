@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   template: `
     <div class="main-view" fxLayout="column">
       <router-outlet></router-outlet>
+      <app-footer></app-footer>
     </div>
   `,
 })

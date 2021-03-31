@@ -36,19 +36,9 @@
             </div>
         </div>
 
-        <div 
-        class="tmp-scroll-indicator animate__animated animate__pulse animate__infinite	infinite"
-        (click)="OpenProject()"
-        [matTooltipPosition]="'above'" 
-        matTooltip="Projects I have worked on"
-        >
-        <mat-icon  [inline]="true">keyboard_arrow_down</mat-icon>
-    </div>
-    <div class="titleProject">Projects & Designs</div>
-
-        <!-- <div class="scroll-indicator" (click)="OpenProject()"[matTooltipPosition]="'above'" matTooltip="Projects">
-            <div class="dots"></div>
-        </div> -->
+        <div class="icon" (click)="OpenProject()">
+            <mat-icon [inline]="true">keyboard_arrow_down</mat-icon>
+        </div>
 
     </div>    
 
