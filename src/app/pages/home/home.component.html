@@ -1,5 +1,27 @@
 <div class="main_view" fxLayoutAlign="center" fxLayout="column">
-  <app-dev-card fxLayoutAlign="center"></app-dev-card>
-  <app-about-me fxLayoutAlign="center"></app-about-me>
-  <app-project-view #projectView></app-project-view>
+  <app-dev-card fxLayoutAlign="center" ></app-dev-card>
+  <app-about-me fxLayoutAlign="center" class="section"></app-about-me>
+  
+  <div class="showcase-project-parent">
+    <div class="showcase-project" fxLayout="column" >
+      <div class="header" fxLayout="column">
+        <div class="title">Currently Working on <a class="higlight" href="https://www.animet.tv/" target="_blank">Animet.tv</a></div>
+        <div class="sub-title">Watch anime online in high quality without ads</div>
+      </div>
+      <div fxLayoutAlign="center" class="divider-parent">
+        <div class="divider"></div>
+      </div>
+      <div class="showcase-container">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 45" class="sc-bRBYWo gpCabG"><g fill="none" fill-rule="evenodd"><path fill="#2A2A2A" d="M8.974 0h1262.052c3.12 0 4.252.325 5.393.935a6.36 6.36 0 0 1 2.646 2.646c.61 1.14.935 2.272.935 5.393V45H0V8.974c0-3.12.325-4.252.935-5.393A6.36 6.36 0 0 1 3.581.935C4.721.325 5.853 0 8.974 0z"></path><g transform="translate(20 16)"><circle cx="7" cy="7" r="7" fill="#FF6767"></circle><circle cx="27" cy="7" r="7" fill="#FFD202"></circle><circle cx="47" cy="7" r="7" fill="#00FF54"></circle></g></g></svg>
+        <div class="video-container">
+          <video autoplay="" loop="" playsinline="" width="100%" height="auto" class="sc-jhAzac fCXIpy"><source src="assets/video/animet-tv.mp4" type="video/mp4">
+            <source src="assets/video/animet-tv.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  
+  <app-project-view #projectView class="section"></app-project-view>
 </div>

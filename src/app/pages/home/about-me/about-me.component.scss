@@ -61,6 +61,10 @@ a {
     font-size: 22px;
 }
 
+.title {
+	font-size: 3rem;
+}
+
 @media only screen and (max-width: 600px) {
     .message {
         font-size: 14px!important;
@@ -74,5 +78,9 @@ a {
 
     .svg-icons >img {
         height: 35px;
+    }
+
+    .title {
+        font-size: 2rem;
     }
 }

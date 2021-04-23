@@ -4,7 +4,7 @@ import { Designs, Projects, Button } from './project-view.component';
 
 export const _PROJECTS_LIST: Projects[]  = [
   { 
-    ProjectTitle: 'Animet.tk',
+    ProjectTitle: 'Animet.tv',
     CompanyName: 'Personal',
     ImageSrc: [
       { path: '../../../../assets/image/animet_2.jpg', alt: 'anime thubnail 1' },
@@ -13,7 +13,7 @@ export const _PROJECTS_LIST: Projects[]  = [
     ],
     ImageSrc_mobile: '',
     ProjectDesc: 'Watch anime online in high quality for free. Watch anime subbed, anime dubbed online free. Update daily, fast streaming, no ads, no registration',
-    ProjectLink: { Link: 'https://www.animet.tk/', ButtonStatus: false },
+    ProjectLink: { Link: 'https://www.animet.tv/', ButtonStatus: false },
     ProjectGithub: { Link: 'https://github.com/asadbek064/animet', ButtonStatus: true }
   },
     { 
